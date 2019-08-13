@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import { getConutry } from '../../../logics/requests/country';
 import { Wrap } from '../../../styles/Atoms/Wrap';
 import { color } from '../../../styles/colors';
-import DetailItem from './DetailItem';
+import { DetailItem } from '../../Atoms/DetailItem';
 
 const stateTemplate = {
   country: {},

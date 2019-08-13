@@ -5,33 +5,23 @@ import { Link } from 'react-router-dom';
 
 import { color } from '../../../../styles/colors';
 import { CardTitle } from '../../../../styles/typography';
+import { DetailItem } from '../../../Atoms/DetailItem';
 
 export const CountryCard = (props) => {
   const {
     image, title, population, region, capital, id,
   } = props;
 
-  function parseNumber(number) {
-    return number.toLocaleString();
-  }
-
   return (
     <Container as={Link} to={`/country/${id}`}>
       <Image src={image} />
       <Content>
         <Title>{title}</Title>
-        <Property>
-          Population:
-          <PropertyValue>{parseNumber(population)}</PropertyValue>
-        </Property>
-        <Property>
-          Region:
-          <PropertyValue>{region}</PropertyValue>
-        </Property>
-        <Property>
-          Capital:
-          <PropertyValue>{capital}</PropertyValue>
-        </Property>
+        <DetailList>
+          <DetailItem title="Population" description={population.toLocaleString()} />
+          <DetailItem title="Region" description={region} />
+          <DetailItem title="Capital" description={capital} />
+        </DetailList>
       </Content>
     </Container>
   );
@@ -74,20 +64,6 @@ const Title = styled(CardTitle)`
   margin-bottom: 10px;
 `;
 
-const Property = styled.p`
-  font-weight: 600;
-  font-size: 14px;
-  color: ${color('country-infos')};
-  display: block;
-  margin-bottom: 5px;
-`;
-
-const PropertyValue = styled.span`
-  font-weight: 300;
-
-  &:before {
-    content: ' ';
-  }
-`;
+const DetailList = styled.ul``;
 
 export default CountryCard;

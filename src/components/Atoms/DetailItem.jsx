@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { color } from '../../../styles/colors';
+import { color } from '../../styles/colors';
 
-const DetailItem = ({ title, description }) => (
+export const DetailItem = ({ title, description }) => (
   <Container>
     <Title>{`${title}: `}</Title>
     <Description>{description}</Description>
