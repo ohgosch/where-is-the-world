@@ -31,7 +31,7 @@ export class CountryList extends React.Component {
     return (
       <Container>
         {countries.map(({
-          name, flag, population, region, capital,
+          name, flag, population, region, capital, alpha3Code,
         }) => (
           <CountryCard
             title={name}
@@ -40,12 +40,9 @@ export class CountryList extends React.Component {
             region={region}
             capital={capital}
             key={name}
+            alpha3Code={alpha3Code}
           />
         ))}
-        {/* <CountryCard />
-        <CountryCard />
-        <CountryCard />
-        <CountryCard /> */}
       </Container>
     );
   }
