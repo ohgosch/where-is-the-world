@@ -7,3 +7,11 @@ export const getAll = () => (
 export const getConutry = (code) => (
   Axios.get(`/alpha/${code}`)
 );
+
+export const getByCodes = (codes = []) => (
+  Axios.get('/alpha', {
+    params: {
+      codes: codes.join(';'),
+    },
+  })
+);

@@ -5,13 +5,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
-import { getConutry } from '../../../logics/requests/country';
+import { getConutry, getByCodes } from '../../../logics/requests/country';
 import { Wrap } from '../../../styles/Atoms/Wrap';
 import { color } from '../../../styles/colors';
 import { DetailItem } from '../../Atoms/DetailItem';
+import { BorderCountries } from './BorderCountries';
 
 const stateTemplate = {
   country: {},
+  borderCountries: [],
   ready: false,
 };
 
@@ -30,16 +32,29 @@ export class Country extends React.Component {
     const { match: { params } } = this.props;
     const { id } = params;
 
-    const response = await getConutry(id);
+    const { data } = await getConutry(id);
+    const { borders } = data;
+
     this.setState((state) => ({
       ...state,
-      country: response.data,
+      country: data,
       ready: true,
+    }));
+
+    this.fetchBorderCountries(borders.filter((border, index) => index < 3));
+  }
+
+  async fetchBorderCountries(borders) {
+    const { data: borderCountries } = await getByCodes(borders);
+
+    this.setState((state) => ({
+      ...state,
+      borderCountries,
     }));
   }
 
   render() {
-    const { country, ready } = this.state;
+    const { country, ready, borderCountries } = this.state;
     const {
       flag, name, nativeName, population, region, subregion,
       capital, topLevelDomain, currencies, languages,
@@ -87,6 +102,7 @@ export class Country extends React.Component {
                     <DetailItem title="Languages" description={getNameString(languages)} />
                   )}
                 </DetailList>
+                <BorderCountries borderCountries={borderCountries} />
               </InfoSide>
             </Content>
           )}
