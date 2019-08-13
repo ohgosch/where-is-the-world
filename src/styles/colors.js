@@ -9,6 +9,8 @@ export const colors = {
     'text-dark': '#101113',
     'inputs': '#242426',
     'placeholder': '#888888',
+    'country-title': '#232323',
+    'country-infos': '#161616',
   },
 };
 

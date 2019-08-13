@@ -14,7 +14,8 @@ export const H1 = styled.h1`
 `;
 
 export const CardTitle = styled.h2`
-  font-size: 14px;
+  font-size: 16px;
+  color: ${color('country-title')};
 `;
 
 export const CountryName = styled.h2`
