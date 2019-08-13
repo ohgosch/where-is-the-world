@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { Input } from './Input';
 import { Select } from './Select';
-import { SMALL } from '../../../../logics/responsive';
+import { SMALL } from '../../../../logics/utils/responsive-size';
 
 export const Filter = () => (
   <Container>

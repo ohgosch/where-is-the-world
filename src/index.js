@@ -2,6 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { axiosSetup } from './logics/utils/axios';
+
+// Set the BASE_API to Axios lib
+axiosSetup();
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

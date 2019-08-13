@@ -5,7 +5,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 import { Input as InputStyle } from '../../../../styles/Atoms/Input';
 import { color } from '../../../../styles/colors';
-import { MEDIUM } from '../../../../logics/responsive';
+import { MEDIUM } from '../../../../logics/utils/responsive-size';
 
 export const Input = () => (
   <Container>

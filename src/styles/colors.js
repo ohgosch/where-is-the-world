@@ -1,5 +1,5 @@
 /* eslint-disable quote-props */
-import { isObject } from '../logics/object';
+import { isObject } from '../logics/utils/object';
 
 export const colors = {
   light: {

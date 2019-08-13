@@ -7,7 +7,7 @@ import { CardTitle } from '../../../../styles/typography';
 
 export const CountryCard = (props) => {
   const {
-    image, population, region, capital,
+    image, title, population, region, capital,
   } = props;
 
   function parseNumber(number) {
@@ -18,7 +18,7 @@ export const CountryCard = (props) => {
     <Container>
       <Image src={image} alt="" />
       <Content>
-        <Title>Germany</Title>
+        <Title>{title}</Title>
         <Property>
           Population:
           <PropertyValue>{parseNumber(population)}</PropertyValue>
@@ -41,6 +41,7 @@ CountryCard.propTypes = {
   population: PropTypes.number,
   region: PropTypes.string,
   capital: PropTypes.string,
+  title: PropTypes.string,
 };
 
 CountryCard.defaultProps = {
@@ -48,6 +49,7 @@ CountryCard.defaultProps = {
   population: 0,
   region: '',
   capital: '',
+  title: '',
 };
 
 const Container = styled.article`

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { color } from './colors';
-import { SMALL } from '../logics/responsive';
+import { SMALL } from '../logics/utils/responsive-size';
 
 export const H1 = styled.h1`
   color: ${color('text-dark')};
