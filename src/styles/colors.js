@@ -1,9 +1,12 @@
+/* eslint-disable quote-props */
 import { isObject } from '../logics/object';
 
 export const colors = {
   light: {
-    white: '#FFF',
-    primary: '#FAFAFA',
+    'white': '#FFF',
+    'primary': '#FAFAFA',
+    'secondary': '#121212',
+    'text-dark': '#101113',
   },
 };
 
