@@ -9,10 +9,12 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <BrowserRouter>
-        <Header />
-        <RouterPages />
-      </BrowserRouter>
+      <main>
+        <BrowserRouter>
+          <Header />
+          <RouterPages />
+        </BrowserRouter>
+      </main>
     </>
   );
 }

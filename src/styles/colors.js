@@ -7,6 +7,8 @@ export const colors = {
     'primary': '#FAFAFA',
     'secondary': '#121212',
     'text-dark': '#101113',
+    'inputs': '#242426',
+    'placeholder': '#888888',
   },
 };
 

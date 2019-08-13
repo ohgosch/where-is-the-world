@@ -16,7 +16,8 @@ export const GlobalStyle = createGlobalStyle`
 
   * {
     box-sizing: border-box;
-    font-family: 'Nunito Sans', sans-serif;;
+    font-family: 'Nunito Sans', sans-serif;
+    outline: none;
   }
 
   button {

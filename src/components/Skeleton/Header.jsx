@@ -7,7 +7,7 @@ import { faMoon } from '@fortawesome/free-regular-svg-icons';
 import { Wrap } from '../../styles/Atoms/Wrap';
 import { H1 } from '../../styles/typography';
 import { color } from '../../styles/colors';
-import { SMALL } from '../../logics/reponsive';
+import { SMALL } from '../../logics/responsive';
 
 export const Header = () => (
   <Container>
@@ -28,6 +28,7 @@ export default Header;
 const Container = styled.header`
   background-color: ${color('white')};
   box-shadow: 0 0 6px 2px rgba(0, 0, 0, .1);
+  margin-bottom: 30px;
 `;
 
 const Content = styled(Wrap)`

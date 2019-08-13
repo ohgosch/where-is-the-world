@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { SMALL, MEDIUM, LARGE } from '../../logics/reponsive';
+import { SMALL, MEDIUM, LARGE } from '../../logics/responsive';
 
 export const Wrap = styled.div`
   display: block;
@@ -22,6 +22,6 @@ export const Wrap = styled.div`
   /* Large */
   @media (min-width: ${LARGE.MIN}) {
     width: 88%;
-    max-width: ${LARGE.MAX};
+    max-width: ${LARGE.MIN};
   }
 `;
