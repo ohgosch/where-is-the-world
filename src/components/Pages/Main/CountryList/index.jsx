@@ -40,7 +40,7 @@ export class CountryList extends React.Component {
             region={region}
             capital={capital}
             key={name}
-            alpha3Code={alpha3Code}
+            id={alpha3Code}
           />
         ))}
       </Container>

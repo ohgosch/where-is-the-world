@@ -8,7 +8,7 @@ import { CardTitle } from '../../../../styles/typography';
 
 export const CountryCard = (props) => {
   const {
-    image, title, population, region, capital, alpha3Code,
+    image, title, population, region, capital, id,
   } = props;
 
   function parseNumber(number) {
@@ -16,7 +16,7 @@ export const CountryCard = (props) => {
   }
 
   return (
-    <Container as={Link} to={`/country/${alpha3Code}`}>
+    <Container as={Link} to={`/country/${id}`}>
       <Image src={image} />
       <Content>
         <Title>{title}</Title>
@@ -43,7 +43,7 @@ CountryCard.propTypes = {
   region: PropTypes.string,
   capital: PropTypes.string,
   title: PropTypes.string,
-  alpha3Code: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 CountryCard.defaultProps = {
@@ -54,7 +54,7 @@ CountryCard.defaultProps = {
   title: '',
 };
 
-const Container = styled.article`
+const Container = styled.a`
   box-shadow: 0 0 4px 0px rgba(0, 0, 0, .1);
   border-radius: 5px;
   overflow: hidden;
