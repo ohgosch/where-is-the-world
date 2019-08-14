@@ -4,9 +4,17 @@ import styled from 'styled-components';
 import { CountryCard } from './CountryCard';
 import { MEDIUM, LARGE } from '../../../../logics/utils/responsive-size';
 import { getAll } from '../../../../logics/requests/country';
+import { CountriesContext } from '../../../Contexts/CountriesContext';
+import { filterByRegion, filterByName } from '../../../../logics/utils/filter-countries';
 
 const stateTemplate = {
   countries: [],
+  countriesRequest: [],
+};
+
+let filters = {
+  country: '',
+  region: '',
 };
 
 export class CountryList extends React.Component {
@@ -20,13 +28,35 @@ export class CountryList extends React.Component {
     this.fetch();
   }
 
-  async fetch() {
-    const response = await getAll();
+  componentDidUpdate() {
+    const { country: newCountry, region: newRegion } = this.context;
+    const { country: oldCountry, region: oldRegion } = filters;
+
+    if (newCountry !== oldCountry || newRegion !== oldRegion) {
+      filters = { ...this.context };
+      this.filter();
+    }
+  }
+
+  filter() {
+    const { countriesRequest } = this.state;
+    const { country, region } = this.context;
+    let countries = filterByRegion(countriesRequest, region);
+    countries = filterByName(countries, country);
 
     this.setState((state) => ({
       ...state,
-      countries: response.data,
+      countries,
     }));
+  }
+
+  async fetch() {
+    const response = await getAll();
+    await this.setState((state) => ({
+      ...state,
+      countriesRequest: response.data,
+    }));
+    this.filter();
   }
 
   render() {
@@ -51,6 +81,8 @@ export class CountryList extends React.Component {
     );
   }
 }
+
+CountryList.contextType = CountriesContext;
 
 const Container = styled.div`
   display: grid;

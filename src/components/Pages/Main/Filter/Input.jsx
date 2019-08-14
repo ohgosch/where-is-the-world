@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
@@ -7,14 +8,18 @@ import { Input as InputStyle } from '../../../../styles/Atoms/Input';
 import { color } from '../../../../styles/colors';
 import { MEDIUM } from '../../../../logics/utils/responsive-size';
 
-export const Input = () => (
+export const Input = ({ onChange }) => (
   <Container>
     <IconWrap>
       <FontAwesomeIcon icon={faSearch} />
     </IconWrap>
-    <InputElement placeholder="Search for a country" />
+    <InputElement onChange={onChange} placeholder="Search for a country" />
   </Container>
 );
+
+Input.propTypes = {
+  onChange: PropTypes.func.isRequired,
+};
 
 const Container = styled.div`
   width: 100%;
