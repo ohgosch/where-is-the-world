@@ -18,13 +18,13 @@ export class Main extends React.Component {
     super(props);
 
     this.state = { ...stateTemplate };
+  }
 
-    this.updateFilter = (filter) => {
-      this.setState((state) => ({
-        ...state,
-        filter,
-      }));
-    };
+  updateFilter = (filter) => {
+    this.setState((state) => ({
+      ...state,
+      filter,
+    }));
   }
 
   render() {
