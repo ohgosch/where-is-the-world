@@ -12,16 +12,16 @@ const stateTemplate = {
   countriesRequest: [],
 };
 
-let filters = {
-  country: '',
-  region: '',
-};
-
 export class CountryList extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = { ...stateTemplate };
+
+    this.filters = {
+      country: '',
+      region: '',
+    };
   }
 
   componentDidMount() {
@@ -30,10 +30,10 @@ export class CountryList extends React.Component {
 
   componentDidUpdate() {
     const { country: newCountry, region: newRegion } = this.context;
-    const { country: oldCountry, region: oldRegion } = filters;
+    const { country: oldCountry, region: oldRegion } = this.filters;
 
     if (newCountry !== oldCountry || newRegion !== oldRegion) {
-      filters = { ...this.context };
+      this.filters = { ...this.context };
       this.filter();
     }
   }
