@@ -80,28 +80,28 @@ export class Country extends React.Component {
                 <InfoSideWrap>
                   <Title>{name}</Title>
                   <DetailList>
-                    {nativeName && (
+                    {!!nativeName && (
                       <DetailItem title="Native Name" description={nativeName} />
                     )}
-                    {population && (
+                    {!!population && (
                       <DetailItem title="Population" description={population.toLocaleString()} />
                     )}
-                    {region && (
+                    {!!region && (
                       <DetailItem title="Region" description={region} />
                     )}
-                    {subregion && (
+                    {!!subregion && (
                       <DetailItem title="Sub Region" description={subregion} />
                     )}
-                    {capital && (
+                    {!!capital && (
                       <DetailItem title="Capital" description={capital} />
                     )}
-                    {topLevelDomain.length && (
+                    {!!topLevelDomain.length && (
                       <DetailItem title="Top Level Domain" description={topLevelDomain[0]} />
                     )}
-                    {currencies.length && (
+                    {!!currencies.length && (
                       <DetailItem title="Currencies" description={getNameString(currencies)} />
                     )}
-                    {languages.length && (
+                    {!!languages.length && (
                       <DetailItem title="Languages" description={getNameString(languages)} />
                     )}
                   </DetailList>
