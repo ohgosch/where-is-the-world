@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
-import { getConutry, getByCodes } from '../../../logics/requests/country';
+import { getCountry, getByCodes } from '../../../logics/requests/country';
 import { Wrap } from '../../../styles/Atoms/Wrap';
 import { color } from '../../../styles/colors';
 import { DetailItem } from '../../Atoms/DetailItem';
@@ -67,7 +67,7 @@ export class Country extends React.Component {
   async fetchCountry() {
     const { code } = this.state;
 
-    const { data } = await getConutry(code);
+    const { data } = await getCountry(code);
     const { borders } = data;
 
     this.setState((state) => ({
