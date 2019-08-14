@@ -105,7 +105,9 @@ export class Country extends React.Component {
                       <DetailItem title="Languages" description={getNameString(languages)} />
                     )}
                   </DetailList>
-                  <BorderCountries borderCountries={borderCountries} />
+                  {!!borderCountries.length && (
+                    <BorderCountries borderCountries={borderCountries} />
+                  )}
                 </InfoSideWrap>
               </InfoSide>
             </Content>
