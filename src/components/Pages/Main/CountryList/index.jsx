@@ -10,7 +10,11 @@ const stateTemplate = {
 };
 
 export class CountryList extends React.Component {
-  state = { ...stateTemplate }
+  constructor(props) {
+    super(props);
+
+    this.state = { ...stateTemplate };
+  }
 
   componentDidMount() {
     this.fetch();

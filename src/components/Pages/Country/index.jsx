@@ -16,6 +16,7 @@ const stateTemplate = {
   country: {},
   borderCountries: [],
   ready: false,
+  code: null,
 };
 
 function getNameString(list) {
@@ -23,17 +24,50 @@ function getNameString(list) {
 }
 
 export class Country extends React.Component {
-  state = { ...stateTemplate }
+  constructor(props) {
+    super(props);
+
+    const { match: { params } } = props;
+    const { id } = params;
+    this.state = { ...stateTemplate, code: id };
+  }
+
+  static getDerivedStateFromProps(props, state) {
+    const { match: { params } } = props;
+    const { id } = params;
+
+    // Verify if have change for code param
+    if (id !== state.code) {
+      return {
+        code: id,
+      };
+    }
+    return null;
+  }
 
   componentDidMount() {
     this.fetchCountry();
   }
 
-  async fetchCountry() {
-    const { match: { params } } = this.props;
-    const { id } = params;
+  componentDidUpdate(prevProps, prevState) {
+    const { code: oldCode } = prevState;
+    const { code: newCode } = this.state;
 
-    const { data } = await getConutry(id);
+    // If the code was changed, update the infos
+    if (oldCode === newCode) return;
+
+    this.reset();
+    this.fetchCountry();
+  }
+
+  reset() {
+    this.setState({ ...stateTemplate });
+  }
+
+  async fetchCountry() {
+    const { code } = this.state;
+
+    const { data } = await getConutry(code);
     const { borders } = data;
 
     this.setState((state) => ({
