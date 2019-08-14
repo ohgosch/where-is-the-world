@@ -45,6 +45,8 @@ export class Country extends React.Component {
   }
 
   async fetchBorderCountries(borders) {
+    if (!borders.length) return;
+
     const { data: borderCountries } = await getByCodes(borders);
 
     this.setState((state) => ({
@@ -75,34 +77,36 @@ export class Country extends React.Component {
                 <Image src={flag} alt="" />
               </FlagSide>
               <InfoSide>
-                <Title>{name}</Title>
-                <DetailList>
-                  {nativeName && (
-                    <DetailItem title="Native Name" description={nativeName} />
-                  )}
-                  {population && (
-                    <DetailItem title="Population" description={population.toLocaleString()} />
-                  )}
-                  {region && (
-                    <DetailItem title="Region" description={region} />
-                  )}
-                  {subregion && (
-                    <DetailItem title="Sub Region" description={subregion} />
-                  )}
-                  {capital && (
-                    <DetailItem title="Capital" description={capital} />
-                  )}
-                  {topLevelDomain.length && (
-                    <DetailItem title="Top Level Domain" description={topLevelDomain[0]} />
-                  )}
-                  {currencies.length && (
-                    <DetailItem title="Currencies" description={getNameString(currencies)} />
-                  )}
-                  {languages.length && (
-                    <DetailItem title="Languages" description={getNameString(languages)} />
-                  )}
-                </DetailList>
-                <BorderCountries borderCountries={borderCountries} />
+                <InfoSideWrap>
+                  <Title>{name}</Title>
+                  <DetailList>
+                    {nativeName && (
+                      <DetailItem title="Native Name" description={nativeName} />
+                    )}
+                    {population && (
+                      <DetailItem title="Population" description={population.toLocaleString()} />
+                    )}
+                    {region && (
+                      <DetailItem title="Region" description={region} />
+                    )}
+                    {subregion && (
+                      <DetailItem title="Sub Region" description={subregion} />
+                    )}
+                    {capital && (
+                      <DetailItem title="Capital" description={capital} />
+                    )}
+                    {topLevelDomain.length && (
+                      <DetailItem title="Top Level Domain" description={topLevelDomain[0]} />
+                    )}
+                    {currencies.length && (
+                      <DetailItem title="Currencies" description={getNameString(currencies)} />
+                    )}
+                    {languages.length && (
+                      <DetailItem title="Languages" description={getNameString(languages)} />
+                    )}
+                  </DetailList>
+                  <BorderCountries borderCountries={borderCountries} />
+                </InfoSideWrap>
               </InfoSide>
             </Content>
           )}
@@ -157,12 +161,15 @@ const InfoSide = styled.div`
   flex-flow: column;
 `;
 
+const InfoSideWrap = styled.div``;
+
 const Title = styled.h2`
   margin-bottom: 30px;
 `;
 
 const DetailList = styled.ul`
   column-count: 2;
+  flex-basis: 100%;
 `;
 
 export default Country;

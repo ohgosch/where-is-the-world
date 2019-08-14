@@ -10,7 +10,8 @@ export const colors = {
     'inputs': '#242426',
     'placeholder': '#888888',
     'country-title': '#232323',
-    'country-infos': '#161616',
+    'country-infos': '#141517',
+    'country-infos-description': '#292929',
   },
 };
 

@@ -27,7 +27,7 @@ const Title = styled.span`
 const Description = styled.span`
   font-weight: 600;
   font-size: 14px;
-  color: ${color('country-infos')};
+  color: ${color('country-infos-description')};
   margin-bottom: 5px;
 `;
 
