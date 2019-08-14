@@ -10,6 +10,7 @@ import { Wrap } from '../../../styles/Atoms/Wrap';
 import { color } from '../../../styles/colors';
 import { DetailItem } from '../../Atoms/DetailItem';
 import { BorderCountries } from './BorderCountries';
+import { LARGE } from '../../../logics/utils/responsive-size';
 
 const stateTemplate = {
   country: {},
@@ -145,8 +146,13 @@ const IconWrap = styled.span`
 const Content = styled.div`
   margin-top: 50px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 80px;
+  grid-gap: 50px;
+
+  /* Large */
+  @media (min-width: ${LARGE.MIN}) {
+    grid-gap: 80px;
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 const FlagSide = styled.div``;
@@ -170,8 +176,12 @@ const Title = styled.h2`
 `;
 
 const DetailList = styled.ul`
-  column-count: 2;
   flex-basis: 100%;
+
+  /* Large */
+  @media (min-width: ${LARGE.MIN}) {
+    column-count: 2;
+  }
 `;
 
 export default Country;
