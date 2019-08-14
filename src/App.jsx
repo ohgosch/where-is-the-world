@@ -55,7 +55,7 @@ class App extends React.Component {
 }
 
 const Main = styled.main`
-  padding-bottom: 80px;;
+  padding-bottom: 80px;
 `;
 
 export default App;
