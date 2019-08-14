@@ -45,6 +45,7 @@ CountryCard.defaultProps = {
 };
 
 const Container = styled.a`
+  background-color: ${(p) => color('white', p.theme.name)};
   box-shadow: 0 0 4px 0px rgba(0, 0, 0, .1);
   border-radius: 5px;
   overflow: hidden;
@@ -53,7 +54,6 @@ const Container = styled.a`
 
 const Image = styled.img`
   width: 100%;
-  background-color: ${color('white')};
 `;
 
 const Content = styled.div`

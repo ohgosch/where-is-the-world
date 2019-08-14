@@ -3,7 +3,7 @@ import { color } from './colors';
 import { SMALL } from '../logics/utils/responsive-size';
 
 export const H1 = styled.h1`
-  color: ${color('text-dark')};
+  color: ${(p) => color('text-dark', p.theme.name)};
   font-weight: 900;
   font-size: 22px;
 
@@ -15,7 +15,7 @@ export const H1 = styled.h1`
 
 export const CardTitle = styled.h2`
   font-size: 16px;
-  color: ${color('country-title')};
+  color: ${(p) => color('country-title', p.theme.name)};
 `;
 
 export const CountryName = styled.h2`

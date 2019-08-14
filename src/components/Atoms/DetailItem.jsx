@@ -20,14 +20,14 @@ const Container = styled.li``;
 const Title = styled.span`
   font-weight: 900;
   font-size: 14px;
-  color: ${color('country-infos')};
+  color: ${(p) => color('country-infos', p.theme.name)};
   margin-bottom: 5px;
 `;
 
 const Description = styled.span`
   font-weight: 600;
   font-size: 14px;
-  color: ${color('country-infos-description')};
+  color: ${(p) => color('country-infos-description', p.theme.name)};
   margin-bottom: 5px;
 `;
 

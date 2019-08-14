@@ -36,7 +36,7 @@ const Container = styled.div`
 const IconWrap = styled.div`
   position: absolute;
   left: 30px;
-  color: ${color('placeholder')};
+  color: ${(p) => color('placeholder', p.theme.name)};
   pointer-events: none;
 `;
 

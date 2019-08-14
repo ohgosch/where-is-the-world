@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: ${color('primary')};
+    background-color: ${(p) => color('primary', p.theme.name)};
     min-height: 100vh;
   }
 

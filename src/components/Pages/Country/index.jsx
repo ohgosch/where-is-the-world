@@ -164,12 +164,13 @@ Country.propTypes = {
 const Container = styled.div``;
 
 const Back = styled.a`
-  background-color: ${color('white')};
+  background-color: ${(p) => color('white', p.theme.name)};
   border-radius: 4px;
   box-shadow: 0 0 4px 0px rgba(0, 0, 0, .1);
   padding: 7px 20px;
   font-size: 12px;
   display: inline-block;
+  color: ${(p) => color('black', p.theme.name)};
 `;
 
 const IconWrap = styled.span`
@@ -207,6 +208,7 @@ const InfoSideWrap = styled.div``;
 
 const Title = styled.h2`
   margin-bottom: 30px;
+  color: ${(p) => color('country-title', p.theme.name)};
 `;
 
 const DetailList = styled.ul`

@@ -38,6 +38,7 @@ const BorderCountriesTitle = styled.h3`
   font-size: 14px;
   margin-right: 10px;
   flex-shrink: 0;
+  color: ${(p) => color('country-infos', p.theme.name)};
 `;
 
 const BorderCountriesList = styled.ul`
@@ -48,13 +49,14 @@ const BorderCountriesList = styled.ul`
 const BorderCountriesItem = styled.li``;
 
 const BorderCountriesItemLink = styled.a`
-  background-color: ${color('white')};
+  background-color: ${(p) => color('white', p.theme.name)};
   display: inline-block;
   padding: 5px 20px;
   margin: 5px;
   box-shadow: 0 0 4px 0px rgba(0, 0, 0, .1);
   border-radius: 3px;
   font-size: 14px;
+  color: ${(p) => color('country-infos-description', p.theme.name)};
 `;
 
 export default BorderCountries;
