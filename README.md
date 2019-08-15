@@ -13,4 +13,4 @@ In the project directory, you can run:
 
 - `npm start` for you start the development server.
 - `npm run build` for you build the production projetc.
-- `npm run lint` for you run the lint tests
+- `npm run lint` for you run the lint tests.

@@ -44,7 +44,7 @@ class App extends React.Component {
           <GlobalStyle />
           <Main>
             <BrowserRouter>
-              <Header changeTheme={this.changeTheme} />
+              <Header changeTheme={this.changeTheme} theme={theme} />
               <RouterPages />
             </BrowserRouter>
           </Main>
