@@ -4,20 +4,22 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon } from '@fortawesome/free-regular-svg-icons';
+import { faMoon as faMoonSolid } from '@fortawesome/free-solid-svg-icons';
 
 import { Wrap } from '../../styles/Atoms/Wrap';
 import { H1 } from '../../styles/typography';
 import { color } from '../../styles/colors';
 import { SMALL } from '../../logics/utils/responsive-size';
 
-export const Header = ({ changeTheme }) => (
+export const Header = ({ changeTheme, theme }) => (
   <Container>
     <Content>
       <Link to="/">
         <H1>Where is the world?</H1>
       </Link>
       <DarkMode title="Dark Mode" onClick={() => changeTheme()}>
-        <FontAwesomeIcon icon={faMoon} />
+        {theme === 'light' && (<FontAwesomeIcon icon={faMoon} />)}
+        {theme === 'dark' && (<FontAwesomeIcon icon={faMoonSolid} />)}
         <span>Dark Mode</span>
       </DarkMode>
     </Content>
@@ -26,6 +28,7 @@ export const Header = ({ changeTheme }) => (
 
 Header.propTypes = {
   changeTheme: PropTypes.func.isRequired,
+  theme: PropTypes.string.isRequired,
 };
 
 export default Header;
