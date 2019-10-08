@@ -1,5 +1,3 @@
-You can look the project documentation in the [DOCUMENTATION.md](DOCUMENTATION.md) file
-
 ## The challenge
 
 Your challenge is to integrate with the [REST Countries API](https://restcountries.eu) to pull country data and display it like in the designs.
