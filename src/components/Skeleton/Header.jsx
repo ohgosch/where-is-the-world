@@ -6,10 +6,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon } from '@fortawesome/free-regular-svg-icons';
 import { faMoon as faMoonSolid } from '@fortawesome/free-solid-svg-icons';
 
-import { Wrap } from '../../styles/Atoms/Wrap';
-import { H1 } from '../../styles/typography';
-import { color } from '../../styles/colors';
-import { SMALL } from '../../logics/utils/responsive-size';
+import { Wrap } from 'styles/Atoms/Wrap';
+import { H1 } from 'styles/typography';
+import { color } from 'styles/colors';
+import { SMALL } from 'logics/utils/responsive-size';
 
 export const Header = ({ changeTheme, theme }) => (
   <Container>

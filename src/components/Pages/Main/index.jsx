@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Wrap } from '../../../styles/Atoms/Wrap';
+import { Wrap } from 'styles/Atoms/Wrap';
+import { CountriesContext } from 'components/Contexts/CountriesContext';
+
 import { Filter } from './Filter';
 import { CountryList } from './CountryList';
-import { CountriesContext } from '../../Contexts/CountriesContext';
 
 const stateTemplate = {
   filter: {

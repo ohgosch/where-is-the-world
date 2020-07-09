@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { MEDIUM, LARGE } from 'logics/utils/responsive-size';
+import { getAll } from 'logics/requests/country';
+import { filterByRegion, filterByName } from 'logics/utils/filter-countries';
+import { CountriesContext } from 'components/Contexts/CountriesContext';
+
 import { CountryCard } from './CountryCard';
-import { MEDIUM, LARGE } from '../../../../logics/utils/responsive-size';
-import { getAll } from '../../../../logics/requests/country';
-import { CountriesContext } from '../../../Contexts/CountriesContext';
-import { filterByRegion, filterByName } from '../../../../logics/utils/filter-countries';
 
 const stateTemplate = {
   countries: [],

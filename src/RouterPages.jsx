@@ -4,7 +4,6 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import { Main } from './components/Pages/Main';
 import { Country } from './components/Pages/Country';
 
-
 export const RouterPages = () => (
   <Switch>
     {/* Main page */}

@@ -36,5 +36,12 @@
     ],
     "consistent-return": "off",
     "no-useless-return": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
   }
 }

@@ -2,9 +2,9 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components';
 
-import { RouterPages } from './RouterPages';
-import { GlobalStyle } from './styles/GlobalStyle';
-import { Header } from './components/Skeleton/Header';
+import { RouterPages } from 'RouterPages';
+import { GlobalStyle } from 'styles/GlobalStyle';
+import { Header } from 'components/Skeleton/Header';
 
 const stateTemplate = {
   theme: localStorage.getItem('theme') || 'light',

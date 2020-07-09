@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { color } from '../colors';
+
+import { color } from 'styles/colors';
 
 export const Input = styled.input`
   background-color: ${(p) => color('white', p.theme.name)};

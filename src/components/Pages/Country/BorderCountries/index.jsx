@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import { color } from '../../../../styles/colors';
+
+import { color } from 'styles/colors';
 
 export const BorderCountries = ({ borderCountries }) => (
   <Container>

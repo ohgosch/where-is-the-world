@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
 
-import { getCountry, getByCodes } from '../../../logics/requests/country';
-import { Wrap } from '../../../styles/Atoms/Wrap';
-import { color } from '../../../styles/colors';
-import { DetailItem } from '../../Atoms/DetailItem';
+import { getCountry, getByCodes } from 'logics/requests/country';
+import { Wrap } from 'styles/Atoms/Wrap';
+import { color } from 'styles/colors';
+import { DetailItem } from 'components/Atoms/DetailItem';
+import { LARGE } from 'logics/utils/responsive-size';
+
 import { BorderCountries } from './BorderCountries';
-import { LARGE } from '../../../logics/utils/responsive-size';
 
 const stateTemplate = {
   country: {},
