@@ -1,8 +1,8 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
-import { Main } from 'components/Pages/Main';
-import { Country } from 'components/Pages/Country';
+import { Main } from 'pages/Main';
+import { Country } from 'pages/Country';
 
 function Routes() {
   return (

@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Wrap } from 'styles/Atoms/Wrap';
-import { CountriesContext } from 'components/Contexts/CountriesContext';
+import { Wrap } from 'visual/styles/Wrap';
+import { CountriesContext } from 'contexts/CountriesContext';
 
 import { Filter } from './Filter';
 import { CountryList } from './CountryList';

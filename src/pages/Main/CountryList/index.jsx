@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { MEDIUM, LARGE } from 'logics/utils/responsive-size';
+import { MEDIUM, LARGE } from 'logics/responsive-size';
 import { getAll } from 'logics/requests/country';
-import { filterByRegion, filterByName } from 'logics/utils/filter-countries';
-import { CountriesContext } from 'components/Contexts/CountriesContext';
+import { filterByRegion, filterByName } from 'logics/filter-countries';
+import { CountriesContext } from 'contexts/CountriesContext';
 
 import { CountryCard } from './CountryCard';
 

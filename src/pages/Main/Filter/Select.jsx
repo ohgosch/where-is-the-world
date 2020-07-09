@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
-import { Input as InputStyle } from '../../../../styles/Atoms/Input';
-import { color } from '../../../../styles/colors';
+import { Input as InputStyle } from 'visual/styles/Input';
+import { color } from 'visual/colors';
 
 const regions = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
 

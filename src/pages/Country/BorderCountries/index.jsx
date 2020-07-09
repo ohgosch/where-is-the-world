@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { color } from 'styles/colors';
+import { color } from 'visual/colors';
 
 export const BorderCountries = ({ borderCountries }) => (
   <Container>

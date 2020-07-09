@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-import { color } from './colors';
+import { color } from '../colors';
 
 export const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,600,800&display=swap');

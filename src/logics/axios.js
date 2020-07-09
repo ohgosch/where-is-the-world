@@ -1,6 +1,6 @@
 import axiosDefaults from 'axios/lib/defaults';
 
-import { API_URL } from 'logics/utils/constants';
+import { API_URL } from 'logics/constants';
 
 /**
  * Setup Axios

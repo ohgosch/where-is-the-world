@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { SMALL, MEDIUM, LARGE } from 'logics/utils/responsive-size';
+import { SMALL, MEDIUM, LARGE } from 'logics/responsive-size';
 
 export const Wrap = styled.div`
   display: block;

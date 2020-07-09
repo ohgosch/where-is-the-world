@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { SMALL } from 'logics/utils/responsive-size';
-import { TickTimer } from 'logics/utils/tick-timer';
-import { CountriesContext } from 'components/Contexts/CountriesContext';
+import { SMALL } from 'logics/responsive-size';
+import { TickTimer } from 'logics/tick-timer';
+import { CountriesContext } from 'contexts/CountriesContext';
 
 import { Input } from './Input';
 import { Select } from './Select';

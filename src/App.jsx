@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components';
 
-import { GlobalStyle } from 'styles/GlobalStyle';
+import { GlobalStyle } from 'visual/styles/GlobalStyle';
 import { Header } from 'components/Skeleton/Header';
 import Routes from 'components/Routes';
 

@@ -4,9 +4,9 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-import { Input as InputStyle } from '../../../../styles/Atoms/Input';
-import { color } from '../../../../styles/colors';
-import { MEDIUM } from '../../../../logics/utils/responsive-size';
+import { Input as InputStyle } from 'visual/styles/Input';
+import { color } from 'visual/colors';
+import { MEDIUM } from 'logics/responsive-size';
 
 export const Input = ({ onChange }) => (
   <Container>

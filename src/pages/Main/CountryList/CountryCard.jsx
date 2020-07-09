@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import { color } from 'styles/colors';
-import { CardTitle } from 'styles/typography';
-import { DetailItem } from 'components/Atoms/DetailItem';
+import { color } from 'visual/colors';
+import { CardTitle } from 'visual/typography';
+import { DetailItem } from 'components/DetailItem';
 
 export const CountryCard = (props) => {
   const {
