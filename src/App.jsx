@@ -2,9 +2,9 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components';
 
-import { RouterPages } from 'RouterPages';
 import { GlobalStyle } from 'styles/GlobalStyle';
 import { Header } from 'components/Skeleton/Header';
+import Routes from 'components/Routes';
 
 const stateTemplate = {
   theme: localStorage.getItem('theme') || 'light',
@@ -45,7 +45,7 @@ class App extends React.Component {
           <Main>
             <BrowserRouter>
               <Header changeTheme={this.changeTheme} theme={theme} />
-              <RouterPages />
+              <Routes />
             </BrowserRouter>
           </Main>
         </>
